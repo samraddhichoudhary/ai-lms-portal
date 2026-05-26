@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI LMS Portal Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="lms-container">
+        <aside class="sidebar">
+            <div class="logo-area">
+                <h2>🎓 EduStream</h2>
+                <p>LMS Enterprise v1.0</p>
+            </div>
+            <nav class="nav-links">
+                <button id="btn-catalog" class="nav-btn active">📚 Course Catalog</button>
+                <button id="btn-studio" class="nav-btn">🛠️ Instructor Studio</button>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="top-header">
+                <h1 id="view-title">Available Courses</h1>
+                <p id="view-subtitle">Explore academic tracks and curriculum content live from the SQL database.</p>
+            </header>
+
+            <section id="catalog-view" class="view-section">
+                <div class="course-grid" id="course-grid-container">
+                    </div>
+            </section>
+
+            <section id="studio-view" class="view-section hidden">
+                <div class="studio-card">
+                    <h3>Deploy a New Course Track</h3>
+                    <form id="course-form">
+                        <div class="form-group">
+                            <label for="course-title">Course Program Title</label>
+                            <input type="text" id="course-title" placeholder="e.g., Intro to Machine Learning Pipelines" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="course-desc">Syllabus Curriculum Summary</label>
+                            <textarea id="course-desc" rows="4" placeholder="Describe what modules and skills students will gain..." required></textarea>
+                        </div>
+                        <button type="submit" class="action-btn">🚀 Publish Course to Database</button>
+                    </form>
+                </div>
+            </section>
+
+            <section id="lesson-view" class="view-section hidden">
+                <button id="btn-back-to-catalog" class="back-link">← Back to Catalog</button>
+                <div class="player-layout">
+                    <div class="lesson-sidebar">
+                        <h4>Course Outline</h4>
+                        <ul id="lesson-list-container">
+                            </ul>
+                        <div class="add-lesson-box">
+                            <h5>➕ Add Lesson module</h5>
+                            <input type="text" id="new-lesson-title" placeholder="Lesson Title">
+                            <textarea id="new-lesson-content" rows="2" placeholder="Lesson content text..."></textarea>
+                            <button id="btn-save-lesson" class="small-btn">Save Lesson</button>
+                        </div>
+                    </div>
+                    <div class="lesson-display">
+                        <h2 id="active-lesson-title">Select a Lesson Module</h2>
+                        <hr>
+                        <p id="active-lesson-content">Please select a lesson module from the curriculum checklist panel on the left to begin learning structure.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
