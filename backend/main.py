@@ -4,7 +4,8 @@ from sqlalchemy.orm import Session
 from typing import List
 
 from database import engine, Base, get_db
-from . import models, schemas
+import models
+import schemas
 
 # Initialize the database tables on startup
 Base.metadata.create_all(bind=engine)
