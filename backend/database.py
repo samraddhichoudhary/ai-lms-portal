@@ -3,7 +3,7 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
 # This tells SQLite to create a database file named lms.db right here
-DATABASE_URL = "sqlite:///./lms.db"
+DATABASE_URL = "sqlite:///lms.db"
 
 # Create the engine connection
 engine = create_engine(DATABASE_URL, connect_args={"check_same_thread": False})
